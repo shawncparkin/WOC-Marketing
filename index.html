@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WOC Consulting Project — Demo</title>
+
+  <style>
+    :root {
+      --dark-green: #12372a;
+      --green: #265c45;
+      --light-green: #d8ed91;
+      --cream: #f4f0e7;
+      --white: #fffdf8;
+      --orange: #e77b43;
+      --text: #17231d;
+      --gray: #657169;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 7%;
+      background: rgba(255, 253, 248, 0.96);
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      color: var(--dark-green);
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .logo small {
+      display: block;
+      color: var(--gray);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      background: var(--cream);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+    }
+
+    .demo {
+      display: inline-block;
+      margin-bottom: 25px;
+      padding: 8px 15px;
+      border-radius: 50px;
+      background: var(--light-green);
+      color: var(--dark-green);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 10px 0 25px;
+      font-size: clamp(45px, 7vw, 80px);
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+
+    h1 span {
+      color: var(--dark-green);
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--gray);
+      font-size: 19px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 22px;
+      border-radius: 7px;
+      background: var(--dark-green);
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: var(--green);
+    }
+
+    .mountains {
+      position: absolute;
+      right: -50px;
+      bottom: -40px;
+      color: rgba(18, 55, 42, 0.1);
+      font-size: 380px;
+      line-height: 1;
+      transform: rotate(-4deg);
+    }
+
+    section {
+      padding: 90px 8%;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+      margin: 10px 0 0;
+      font-size: clamp(34px, 5vw, 55px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+
+    .section-heading > p {
+      color: var(--gray);
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      min-height: 220px;
+      padding: 28px;
+      border-radius: 12px;
+      background: var(--cream);
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(18, 55, 42, 0.12);
+    }
+
+    .card-number {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .card h3 {
+      margin: 35px 0 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    .tracks-section {
+      background: var(--dark-green);
+      color: white;
+    }
+
+    .tracks-section .section-heading > p {
+      color: #c5d0ca;
+    }
+
+    .tracks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .track {
+      padding: 25px;
+      border: 1px solid #426555;
+      border-radius: 10px;
+      background: #174535;
+    }
+
+    .track:hover {
+      border-color: var(--light-green);
+    }
+
+    .track span {
+      color: var(--light-green);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .track h3 {
+      margin: 12px 0;
+      font-size: 22px;
+    }
+
+    .track p {
+      margin: 0;
+      color: #cbd7d0;
+      font-size: 14px;
+    }
+
+    .milestones {
+      background: var(--cream);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .milestone {
+      min-height: 200px;
+      padding: 25px;
+      border-top: 5px solid #aeb8b1;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .milestone.complete {
+      border-color: #98b75d;
+    }
+
+    .milestone.current {
+      border-color: var(--orange);
+    }
+
+    .status {
+      display: inline-block;
+      padding: 5px 9px;
+      border-radius: 30px;
+      background: #edf0ed;
+      color: var(--gray);
+      font-size: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .complete .status {
+      background: #e5efd7;
+      color: #355d38;
+    }
+
+    .current .status {
+      background: #f9e2d5;
+      color: #8c3b1c;
+    }
+
+    .milestone h3 {
+      margin: 28px 0 8px;
+    }
+
+    .milestone p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    .goal {
+      background: var(--cream);
+      padding-top: 0;
+    }
+
+    .goal-box {
+      padding: 70px 8%;
+      border-radius: 18px;
+      background: var(--orange);
+      color: white;
+      text-align: center;
+    }
+
+    .goal-box h2 {
+      max-width: 900px;
+      margin: auto;
+      font-size: clamp(30px, 5vw, 50px);
+      line-height: 1.2;
+    }
+
+    .values {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 35px;
+    }
+
+    .values span {
+      padding: 8px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .member {
+      padding: 25px;
+      border: 1px solid #d9ded8;
+      border-radius: 12px;
+    }
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 25px;
+      border-radius: 50%;
+      background: var(--dark-green);
+      color: var(--light-green);
+      font-weight: bold;
+    }
+
+    .member h3 {
+      margin-bottom: 4px;
+    }
+
+    .member p {
+      margin-top: 0;
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    .member a {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 35px 8%;
+      border-top: 1px solid #ddd;
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: var(--orange);
+    }
+
+    @media (max-width: 850px) {
+      nav {
+        display: none;
+      }
+
+      .section-heading {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .problem-grid,
+      .timeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 550px) {
+      .hero {
+        min-height: 580px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      section {
+        padding: 65px 20px;
+      }
+
+      .problem-grid,
+      .tracks,
+      .timeline,
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a class="logo" href="#home">
+      WASATCH OUTFITTERS
+      <small>Consulting Project</small>
+    </a>
+
+    <nav>
+      <a href="#challenge">Challenge</a>
+      <a href="#tracks">Tracks</a>
+      <a href="#milestones">Milestones</a>
+      <a href="#team">Team</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="demo">Student Project Demo</div>
+
+        <div class="eyebrow">
+          KPMG-Sponsored IS Consulting Challenge
+        </div>
+
+        <h1>
+          Building a smarter path forward for
+          <span>Wasatch Outfitters.</span>
+        </h1>
+
+        <p>
+          A practical information systems strategy designed to connect
+          people, processes, and data while supporting WOC's continued growth.
+        </p>
+
+        <a class="button" href="#challenge">
+          Explore the challenge →
+        </a>
+      </div>
+
+      <div class="mountains">▲</div>
+    </section>
+
+    <section id="challenge">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">The Business Challenge</div>
+          <h2>Growth created opportunity. Fragmented systems created risk.</h2>
+        </div>
+
+        <p>
+          Wasatch Outfitters Collective has a loyal customer base and a strong
+          regional brand. However, its rapid growth has outpaced its internal
+          technology, financial systems, and business processes.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+
+        <article class="card">
+          <span class="card-number">01</span>
+          <h3>Operations</h3>
+          <p>
+            Disconnected rental and repair spreadsheets cause double-bookings
+            and unavailable equipment.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">02</span>
+          <h3>Customer Support</h3>
+          <p>
+            Questions spread across phone, email, social media, and stores
+            result in inconsistent answers.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">03</span>
+          <h3>Accounting</h3>
+          <p>
+            Manual reconciliation leaves nearly 30% of expenses unmatched
+            because receipts are missing.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">04</span>
+          <h3>Finance</h3>
+          <p>
+            Capital purchases lack a standardized method for measuring
+            location-specific return on investment.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">05</span>
+          <h3>Supply Chain</h3>
+          <p>
+            Late shipments are often discovered only after a store reports
+            empty shelves.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">06</span>
+          <h3>Marketing</h3>
+          <p>
+            Separate advertising platforms make the true customer acquisition
+            cost difficult to calculate.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">07</span>
+          <h3>Cybersecurity</h3>
+          <p>
+            Informal employee offboarding leaves some former seasonal workers
+            with active system access.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="tracks-section" id="tracks">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Consulting Tracks</div>
+          <h2>Seven perspectives. One connected business.</h2>
+        </div>
+
+        <p>
+          Each team selects one consulting track and develops a practical
+          recommendation for WOC.
+        </p>
+      </div>
+
+      <div class="tracks">
+
+        <article class="track">
+          <span>TRACK A</span>
+          <h3>Digital Transformation</h3>
+          <p>
+            Redesign fragmented workflows and select a practical digital
+            solution to improve operations.
+          </p>
+        </article>
+
+        <article class="track">
+          <span>TRACK B</span>
+          <h3>AI and Analytics</h3>
+          <p>
+            Use dashboards, customer data, and responsible AI to improve
+            decisions and customer support.
+          </p>
+        </article>
+
+        <article class="track">
+          <span>TRACK C</span>
+          <h3>Cyber and Risk</h3>
+          <p>
+            Reduce cybersecurity, privacy, AI, and vendor risks while
+            continuing to modernize.
+          </p>
+        </article>
+
+        <article class="track">
+          <span>TRACK D</span>
+          <h3>Accounting</h3>
+          <p>
+            Automate and secure WOC's fragmented expense reconciliation
+            process.
+          </p>
+        </article>
+
+        <article class="track">
+          <span>TRACK E</span>
+          <h3>Finance</h3>
+          <p>
+            Use data to evaluate capital investments and forecast
+            location-specific ROI.
+          </p>
+        </article>
+
+        <article class="track">
+          <span>TRACK F</span>
+          <h3>Supply Chain</h3>
+          <p>
+            Digitize vendor management to reduce lead times and prevent
+            inventory stockouts.
+          </p>
+        </article>
+
+        <article class="track">
+          <span>TRACK G</span>
+          <h3>Marketing</h3>
+          <p>
+            Integrate digital marketing data to calculate the true customer
+            acquisition cost.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="milestones" id="milestones">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Project Roadmap</div>
+          <h2>Evidence built one milestone at a time.</h2>
+        </div>
+
+        <p>
+          Each milestone becomes the foundation for the next part of the
+          consulting recommendation.
+        </p>
+      </div>
+
+      <div class="timeline">
+
+        <article class="milestone complete">
+          <span class="status">Complete</span>
+          <h3>Milestone 1</h3>
+          <p>Define the business problem and identify stakeholder needs.</p>
+        </article>
+
+        <article class="milestone current">
+          <span class="status">In Progress</span>
+          <h3>Milestone 2</h3>
+          <p>Analyze data and develop useful managerial insights.</p>
+        </article>
+
+        <article class="milestone">
+          <span class="status">Upcoming</span>
+          <h3>Milestone 3</h3>
+          <p>Evaluate the current process and identify bottlenecks.</p>
+        </article>
+
+        <article class="milestone">
+          <span class="status">Upcoming</span>
+          <h3>Milestone 4</h3>
+          <p>Build and evaluate a practical solution prototype.</p>
+        </article>
+
+        <article class="milestone">
+          <span class="status">Upcoming</span>
+          <h3>Milestone 5</h3>
+          <p>Address cybersecurity, privacy, ethics, and governance risks.</p>
+        </article>
+
+        <article class="milestone">
+          <span class="status">Upcoming</span>
+          <h3>Milestone 6</h3>
+          <p>Deliver the implementation plan and executive recommendation.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="goal">
+      <div class="goal-box">
+        <div class="eyebrow" style="color: white;">Our Goal</div>
+
+        <h2>
+          Recommend a practical improvement that WOC can implement within
+          six to twelve months.
+        </h2>
+
+        <div class="values">
+          <span>Affordable</span>
+          <span>Scalable</span>
+          <span>Secure</span>
+          <span>Human-Centered</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">The Consulting Team</div>
+          <h2>Built collaboratively.</h2>
+        </div>
+
+        <p>
+          Replace the placeholder names and roles with your actual group
+          members.
+        </p>
+      </div>
+
+      <div class="team-grid">
+
+        <article class="member">
+          <div class="avatar">SP</div>
+          <h3>Shawn Parkin</h3>
+          <p>Team Member</p>
+          <a href="https://github.com/shawncparkin" target="_blank">
+            GitHub Profile →
+          </a>
+        </article>
+
+        <article class="member">
+          <div class="avatar">01</div>
+          <h3>Team Member</h3>
+          <p>Role or Specialty</p>
+          <a href="#">Add Profile →</a>
+        </article>
+
+        <article class="member">
+          <div class="avatar">02</div>
+          <h3>Team Member</h3>
+          <p>Role or Specialty</p>
+          <a href="#">Add Profile →</a>
+        </article>
+
+        <article class="member">
+          <div class="avatar">03</div>
+          <h3>Team Member</h3>
+          <p>Role or Specialty</p>
+          <a href="#">Add Profile →</a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <strong>Wasatch Outfitters Consulting Project</strong>
+    <span>IS 3060 · Student Project · <strong>DEMO</strong></span>
+    <span>Salt Lake City, Utah</span>
+  </footer>
+
+</body>
+</html>
