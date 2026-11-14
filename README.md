@@ -3,7 +3,10 @@
 **Client:** Wasatch Outfitters Collective (WOC; fictional class case)  
 **Track:** G — Marketing  
 **University:** University of Utah  
-**Team:** Ella Todd, Shawn Parkin, Kallie Northrop, Sean Siracusa, Evelyn Rojas
+**Team:** Ella Todd, Shawn Parkin, Kallie Northrop, Sean Siracusa, Evelyn Teoyotl Rojas
+
+**Project website:** [WOC Marketing Team](https://shawncparkin.github.io/WOC-Marketing/) *(when GitHub Pages is enabled)*  
+**Interactive demonstration:** [CAC Calculator](milestone-04-backend/cac-calculator.html)  
 
 ## Executive recommendation
 
@@ -43,7 +46,7 @@ The [sample CAC calculator](milestone-04-backend/cac-calculator.html) is an **ed
 
 It works with expressly *fictional*, editable marketing figures; it does not connect to WOC datasets or validate real new-customer identities. See [prototype instructions](milestone-04-backend/README.md) and [development notes](milestone-04-backend/PROMPT_LOG.md).
 
-The existing root [`index.html`](index.html) is a **general course-project website**, not the CAC calculator or a deployed data pipeline.
+The root [`index.html`](index.html) is the **Marketing-track project website**. It links to the separate CAC calculator, Tableau findings, milestone artifacts, and the complete five-person team roster. The calculator is a demonstration, not a deployed marketing data pipeline.
 
 ## Final evaluation
 
