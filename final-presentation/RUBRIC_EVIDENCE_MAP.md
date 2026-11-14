@@ -5,13 +5,13 @@
 | Slide | Rubric | Current linked evidence | What must still be verified or supplied |
 |---:|---|---|---|
 | 1–3 | B1 — problem and recommendation (15) | [README](../README.md), WOC case and team proposal | Use actual Tableau findings for strategic justification; name affected marketing, finance and store stakeholders |
-| 4 | B2 — Tableau (15) | [Dashboard image](../milestone-01-tableau/WOC_Marketing_Dashboard.png), [workbook](../milestone-01-tableau/WOC_Marketing_Dashboard_Final.twbx), [analysis](../milestone-01-tableau/WOC_Tableau_Performance_Analysis_Revised_Sean.docx) | Insert real image into deck; cite precise observed trend, date range, and dataset limitation |
+| 4 | B2 — Tableau (15) | [Dashboard image](../milestone-01-tableau/WOC_Marketing_Dashboard.png), [workbook](../milestone-01-tableau/WOC_Marketing_Dashboard_Final.twbx), [analysis](../milestone-01-tableau/WOC_Tableau_Performance_Analysis_Revised_Sean.docx) | Real screenshot embedded in updated Google Slides. Sean's analysis verifies Email $2.91, Instagram $12.87, Google Search $40.55, Radio $41.53 per conversion. Confirm dashboard dates, and explain CAC limitation |
 | 5 | B3 — current-state process (15 combined with slides 6–7) | [SQL milestone](../milestone-02-sql/) | Locate or produce genuine current-state process map with handoffs and bottlenecks |
 | 6 | B3 — future-state design | [SQL relationships image](../milestone-02-sql/sql_foreign_key_relationships.png) | Verify real joins, attribution logic and feasible future-state information flows |
 | 7 | B3 — platform and Wix | [Wix/cloud milestone](../milestone-03-wix-cloud/) | Add Wix screenshots and cost/fit/scalability/risk platform evaluation |
 | 8 | B4 — bounded AI/CRM opportunity (10) | Not yet committed | Add actual interaction-test prompt, observed output, at least one failure/escalation case and human control |
 | 9 | B5 — governance (10) | [Unscored risk template](../milestone-05-cybersecurity/RISK_REGISTER_TEMPLATE.md) | Commit Ella's actual risk register and select 3 rated entries with likelihood, impact and specific controls |
-| 10 | B6 — working prototype (10) | [New CAC demonstration](../milestone-04-backend/cac-calculator.html), [build record](../milestone-04-backend/PROMPT_LOG.md) | Browser-test, screen-capture the functioning demo, and record *actual* prompt and test iterations |
+| 10 | B6 — working prototype (10) | [New CAC demonstration](../milestone-04-backend/cac-calculator.html), [build record](../milestone-04-backend/PROMPT_LOG.md) | 12/12 Chromium/Playwright checks passed with exact JS in a local harness. Screenshot embedded in slide 10; real original-page QA and student prompt history are still needed |
 | 11 | B7 — rollout (5) | [Information design document](../milestone-06-implementation/WOC_Marketing_Information_Design_System.docx) | Confirm 30 / 60–90 / 6–12 month phases, WOC owners, measurable adoption KPIs |
 | All | B8 — communication (5) | Final presentation folder | Upload finalized ~11-slide PPTX; rehearse; keep visuals legible and claims supported |
 

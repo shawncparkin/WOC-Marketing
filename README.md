@@ -26,7 +26,7 @@ WOC's marketing data is fragmented among advertising and email platforms. Platfo
 | [Milestone 4: Prototype](milestone-04-backend/) | [New sample-only CAC calculator](milestone-04-backend/cac-calculator.html) and [development record](milestone-04-backend/PROMPT_LOG.md); **does not replace original course lab evidence** | Shawn — working demonstration; needs real testing and recorded iteration history |
 | [Milestone 5: Cybersecurity](milestone-05-cybersecurity/) | Folder established; [risk-register working template](milestone-05-cybersecurity/RISK_REGISTER_TEMPLATE.md). **Final team ratings still required** | Ella — risk register and practical controls |
 | [Milestone 6: Implementation](milestone-06-implementation/) | [Marketing information design document](milestone-06-implementation/WOC_Marketing_Information_Design_System.docx); phased plan still to validate | Ella / Evelyn — owner-based rollout, governance, success metrics |
-| [Final presentation](final-presentation/) | [Slide evidence and readiness audit](final-presentation/RUBRIC_EVIDENCE_MAP.md). **Final slide deck not yet uploaded** | Whole team — executive recommendation |
+| [Final presentation](final-presentation/) | [Slide evidence and readiness audit](final-presentation/RUBRIC_EVIDENCE_MAP.md). [Editable 11-slide presentation](https://docs.google.com/presentation/d/1JiU53bI1YgGB2jtGWRkKk16eN0A1mvKlJ7MuFDC2BTY/edit) now exists; exported PPTX still needs to be uploaded to GitHub | Whole team — executive recommendation |
 
 ## Suggested solution flow
 

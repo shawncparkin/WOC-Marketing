@@ -36,3 +36,13 @@ The **exact JavaScript embedded in this GitHub file** was fetched from the propo
 
 ## Important limitations
 No connection to real WOC data; no deduplication of customer IDs; no proof of attribution; no business deployment. Displayed "CAC" is a demonstration of the formula **conditional on supplied counts being genuinely verified first-time customers**, not a real-world measurement.
+
+## Chromium / Playwright browser verification — November 14, 2026
+
+A separate **local browser test harness** was constructed with the **exact JavaScript logic** from `cac-calculator.html` (FNV-1a identifier `8b73a741`; 3,629 characters, verified identical). The harness used equivalent form IDs but simplified local CSS, so this verifies **browser execution and controls**, **not the complete original file's styling or remote deployment**.
+
+Using Chromium through Playwright, **12 of 12 tests passed**: starting spend, cost per conversion, sample CAC, live recomputations after changing spend, impossible customer-count rejection, negative spend rejection, channel-level zero new customer handling, zero denominators, reset, no JavaScript page errors, and a mobile-width calculation check.
+
+Screenshots were captured from the browser harness and a cropped view was placed into [the revised 11-slide Google Slides deck](https://docs.google.com/presentation/d/1JiU53bI1YgGB2jtGWRkKk16eN0A1mvKlJ7MuFDC2BTY/edit) on Slide 10. The slide must retain the illustrative-data disclosure. This does not prove WOC data integration or user-supplied new-customer counts are validated.
+
+**Outstanding:** open and inspect the original HTML in a normal desktop/mobile browser, record genuine teammate prompt iterations if available, and verify publication after merge.
