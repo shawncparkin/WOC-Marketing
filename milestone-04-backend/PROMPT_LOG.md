@@ -52,3 +52,13 @@ These are actual conversations documented by the two screenshots I provided to C
 
 ### Screenshot upload status
 Both original screenshot files are linked above from the project's Google Drive evidence copies. They are **not embedded in the GitHub repository**, and access for instructors depends on Google Drive sharing permissions. For a completely self-contained GitHub submission, upload both PNGs to `milestone-04-backend/evidence/` and use relative Markdown links instead.
+
+## Final manual browser evidence — November 14, 2026
+
+**Tester:** Shawn Parkin (Technology Builder). **Result reported by Shawn:** all five manual checks passed in the Chrome calculator: default totals, automatic recalculation, zero-customer behavior, invalid-count warning, and reset.
+
+**Evidence files (Google Drive):** [28-second screen recording](https://drive.google.com/file/d/1PehbrF5-JSJDL8b5y9qeaOM6VpJAOQhC/view) and [default-results screenshot](https://drive.google.com/file/d/1fOs3_Kf23xJ7hUCvGlJ5MmnERNEv7E8x/view).
+
+**Independent recording inspection:** The original submitted MP4 plays correctly, lasts approximately 27.7 seconds, and shows the published calculator in Chrome. The reviewed frames depict baseline results ($4,700 spending; $16.21 per conversion; $73.44 illustrative CAC), user-edited inputs affecting calculations, and an invalid-entry warning. The full five-test pass is a student-reported result, not a claim that every test appears visibly in the video.
+
+**Presentation:** Use the screenshot and/or original recording as authentic prototype evidence on Slide 10. Check that your professor has permission to view the Drive files. These files are linked here rather than stored as GitHub binaries. All calculator inputs are fictional.
