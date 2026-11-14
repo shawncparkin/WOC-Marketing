@@ -1,6 +1,6 @@
 # WOC Marketing — Executive Consulting Presentation
 
-**Current 11-slide editable deck:** [Open Google Slides](https://docs.google.com/presentation/d/1JiU53bI1YgGB2jtGWRkKk16eN0A1mvKlJ7MuFDC2BTY/edit)
+**Current 11-slide editable deck:** [Open Google Slides](https://docs.google.com/presentation/d/1JiU53bI1YgGB2jtGWRkKk16eN0A1mvKlJ7MuFDC2BTY/edit) https://docs.google.com/presentation/d/1JiU53bI1YgGB2jtGWRkKk16eN0A1mvKlJ7MuFDC2BTY/edit?usp=sharing
 
 The deck was revised using **the actual Tableau dashboard image** from [Milestone 1](../milestone-01-tableau/WOC_Marketing_Dashboard.png) and **verified figures from Sean's analysis**: Email Newsletter $2.91, Instagram Ads $12.87, Google Search $40.55, and Local Radio $41.53 cost per reported conversion.
 
