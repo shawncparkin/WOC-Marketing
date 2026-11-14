@@ -1,55 +1,58 @@
 # WOC Marketing — IS 3060 Consulting Challenge
 
-**Client:** Wasatch Outfitters Collective (WOC; fictional class case)  
+**Client:** Wasatch Outfitters Collective (WOC), a fictional consulting case  
 **Track:** G — Marketing  
 **University:** University of Utah  
-**Team:** Ella Todd, Shawn Parkin, Kallie Northrop, Sean Siracusa, Evelyn Teoyotl Rojas
+**Team:** Shawn Parkin · Sean Siracusa · Kallie Northrop · Ella Todd · Evelyn Teoyotl Rojas
 
-**Project website:** [WOC Marketing Team](https://shawncparkin.github.io/WOC-Marketing/) *(when GitHub Pages is enabled)*  
-**Interactive demonstration:** [CAC Calculator](milestone-04-backend/cac-calculator.html)  
+**Project website:** [WOC Marketing homepage](https://shawncparkin.github.io/WOC-Marketing/) *(GitHub Pages availability must be confirmed)*  
+**Prototype:** [Interactive CAC calculator](milestone-04-backend/cac-calculator.html)  
+**Presentation:** [Editable 11-slide executive deck](https://docs.google.com/presentation/d/1JiU53bI1YgGB2jtGWRkKk16eN0A1mvKlJ7MuFDC2BTY/edit) *(Google Slides sharing/access must be confirmed)*
 
-## Executive recommendation
+## Business problem and recommendation
 
-WOC should pilot a **lightweight, governed marketing measurement workflow** that connects channel spending to deduplicated customer and sales records. This will enable more trustworthy channel comparisons and, where records are sufficiently complete, calculation of **new-customer acquisition cost (CAC)**.
+WOC's marketing reports come from separate advertising and email platforms, limiting its ability to compare spending and understand how many **first-time customers** each channel brings in. Platform-reported conversions are not necessarily unique new customers.
 
-WOC's marketing data is fragmented among advertising and email platforms. Platform-reported conversions cannot automatically be equated with first-time customers. The proposal therefore prioritizes consistent identifiers, verified new-customer definitions, transparent data-quality checks, an executive dashboard, and phased implementation rather than an expensive company-wide replacement.
+**Recommendation:** Pilot a practical marketing measurement process connecting channel spending, verified customer identity, and sales records. Apply consistent definitions and quality checks, then use a shared dashboard to support budgeting decisions. Start with a small pilot rather than replacing every platform at once.
 
-**Metric definitions**
-- **Cost per reported conversion:** channel spending / reported platform conversions.
-- **New-customer CAC:** attributable acquisition spending / verified first-time customers acquired over a consistent period.
-- These figures are **not interchangeable**. Zero denominators, duplicates, missing source IDs, attribution assumptions, and existing-customer activity must be flagged.
+**Metric definitions:**
+- **Cost per reported conversion:** Advertising spend ÷ platform-reported conversions.
+- **New-customer acquisition cost (CAC):** Attributable acquisition spend ÷ verified first-time customers over the same period.
+- The two metrics **are not interchangeable**. Real CAC also requires deduplication, agreed attribution rules, and reliable source data.
 
-## Project artifacts
+## Project artifacts and owners
 
-| Folder | Evidence presently in the repository | Owner / rubric use |
+The links below point to actual repository files or folders. **Uploaded** means a file is present in GitHub, not that the entire milestone has been approved or graded.
+
+| Milestone | Artifacts and current status | Owner and presentation use |
 |---|---|---|
-| [Milestone 1: Tableau](milestone-01-tableau/) | [Dashboard PNG](milestone-01-tableau/WOC_Marketing_Dashboard.png), [Tableau workbook](milestone-01-tableau/WOC_Marketing_Dashboard_Final.twbx), [written analysis](milestone-01-tableau/WOC_Tableau_Performance_Analysis_Revised_Sean.docx) | Sean — dashboard evidence, Slide 4 |
-| [Milestone 2: SQL](milestone-02-sql/) | [SQL analysis](milestone-02-sql/WOC_Track_G_SQL_Final_Organized_Sean.docx), [foreign-key diagram](milestone-02-sql/sql_foreign_key_relationships.png), [SQL screenshot document](milestone-02-sql/sql%20screenshot.docx) | Sean — data relationships and solution logic |
-| [Milestone 3: Wix + cloud](milestone-03-wix-cloud/) | Folder established; **Wix screenshots and platform comparison not yet in repository** | Kallie — interface concept and platform selection |
-| [Milestone 4: Prototype](milestone-04-backend/) | [New sample-only CAC calculator](milestone-04-backend/cac-calculator.html) and [development record](milestone-04-backend/PROMPT_LOG.md); **does not replace original course lab evidence** | Shawn — working demonstration; needs real testing and recorded iteration history |
-| [Milestone 5: Cybersecurity](milestone-05-cybersecurity/) | Folder established; [risk-register working template](milestone-05-cybersecurity/RISK_REGISTER_TEMPLATE.md). **Final team ratings still required** | Ella — risk register and practical controls |
-| [Milestone 6: Implementation](milestone-06-implementation/) | [Marketing information design document](milestone-06-implementation/WOC_Marketing_Information_Design_System.docx); phased plan still to validate | Ella / Evelyn — owner-based rollout, governance, success metrics |
-| [Final presentation](final-presentation/) | [Slide evidence and readiness audit](final-presentation/RUBRIC_EVIDENCE_MAP.md). [Editable 11-slide presentation](https://docs.google.com/presentation/d/1JiU53bI1YgGB2jtGWRkKk16eN0A1mvKlJ7MuFDC2BTY/edit) now exists; exported PPTX still needs to be uploaded to GitHub | Whole team — executive recommendation |
+| [1 · Tableau](milestone-01-tableau/) | **Uploaded:** [dashboard image](milestone-01-tableau/WOC_Marketing_Dashboard.png), [Tableau workbook](milestone-01-tableau/WOC_Marketing_Dashboard_Final.twbx), [written analysis](milestone-01-tableau/WOC_Tableau_Performance_Analysis_Revised_Sean.docx) | **Sean Siracusa** — marketing analysis, Slide 4 |
+| [2 · SQL](milestone-02-sql/) | **Uploaded:** [SQL analysis](milestone-02-sql/WOC_Track_G_SQL_Final_Organized_Sean.docx), [relationship diagram](milestone-02-sql/sql_foreign_key_relationships.png), [SQL screenshot document](milestone-02-sql/sql%20screenshot.docx) | **Sean Siracusa** — data relationships and future-state logic, Slides 5–6 |
+| [3 · Wix and cloud](milestone-03-wix-cloud/) | **Evidence pending:** folder exists, but Wix screens and a documented platform comparison are not uploaded | **Kallie Northrop** — solution design and technology selection, Slide 7 |
+| [4 · AI-assisted prototype](milestone-04-backend/) | **Prototype and documentation uploaded:** [CAC calculator](milestone-04-backend/cac-calculator.html), [AI prompt and iteration log](milestone-04-backend/PROMPT_LOG.md), [test and demonstration guide](milestone-04-backend/README.md). Previous testing includes **12/12 browser-harness checks** and **16/16 isolated JavaScript/DOM checks**; the updated original page still needs final live-site verification | **Shawn Parkin** — prototype and GitHub coordination, Slide 10 |
+| [5 · Cybersecurity](milestone-05-cybersecurity/) | **Partial:** [risk-register template](milestone-05-cybersecurity/RISK_REGISTER_TEMPLATE.md) uploaded; final assessed likelihood, impact, owner, and controls are **not yet uploaded** | **Ella Todd** — risk and governance, Slide 9 |
+| [6 · Implementation](milestone-06-implementation/) | **Partial:** [marketing information design document](milestone-06-implementation/WOC_Marketing_Information_Design_System.docx) uploaded; phased plan, owners, adoption steps, and metrics require confirmation | **Ella Todd**, with **Evelyn Teoyotl Rojas** coordinating presentation integration — Slide 11 |
+| [Executive presentation](final-presentation/) | **Editable draft available:** [11-slide Google Slides deck](https://docs.google.com/presentation/d/1JiU53bI1YgGB2jtGWRkKk16eN0A1mvKlJ7MuFDC2BTY/edit) and [rubric evidence map](final-presentation/RUBRIC_EVIDENCE_MAP.md). A final PowerPoint file **has not been committed** to the repo | **Evelyn Teoyotl Rojas** coordinates final integration; **all five teammates** review and present |
 
-## Suggested solution flow
+**Shawn Parkin and Sean Siracusa are different team members.** Shawn leads the prototype/GitHub effort; Sean leads Tableau/SQL analysis.
 
-1. Collect advertising spend, platform-reported activity, customer identity and sales outcomes.
-2. Normalize channels, time periods, campaign identifiers and customer definitions.
-3. Join data carefully, deduplicate and flag missing or conflicting records.
-4. Publish dashboard comparisons with explicit definitions and uncertainty indicators.
-5. Pilot automation only for **flagging anomalies or drafting recommendations**; require human validation before changing official metrics or spending.
-6. Expand to additional locations and channels after an initial pilot passes data-quality and user-adoption checks.
+## Evidence-backed findings
 
-## Proof of concept
+Sean's [Tableau performance analysis](milestone-01-tableau/WOC_Tableau_Performance_Analysis_Revised_Sean.docx) reports cost per conversion of **$2.91** for Email Newsletter, **$12.87** for Instagram Ads, **$40.55** for Google Search, and **$41.53** for Local Radio. Email has the lowest reported conversion cost in that analysis. These values are **not independently verified new-customer CAC**.
 
-The [sample CAC calculator](milestone-04-backend/cac-calculator.html) is an **educational, AI-assisted demonstration added during final-project preparation**. Open the HTML file in a browser, or view it at [the project Pages path](https://shawncparkin.github.io/WOC-Marketing/milestone-04-backend/cac-calculator.html) **if GitHub Pages is enabled and published**.
+The [CAC calculator](milestone-04-backend/cac-calculator.html) is an AI-assisted educational prototype. It uses **fictional sample inputs**, updates calculations automatically, and checks invalid values. It neither connects to a real CRM nor verifies customer identities or campaign attribution. Read the [development log](milestone-04-backend/PROMPT_LOG.md) for genuine prompts, coding iterations, tests, and linked screenshots.
 
-It works with expressly *fictional*, editable marketing figures; it does not connect to WOC datasets or validate real new-customer identities. See [prototype instructions](milestone-04-backend/README.md) and [development notes](milestone-04-backend/PROMPT_LOG.md).
+## Outstanding work before final submission
 
-The root [`index.html`](index.html) is the **Marketing-track project website**. It links to the separate CAC calculator, Tableau findings, milestone artifacts, and the complete five-person team roster. The calculator is a demonstration, not a deployed marketing data pipeline.
+- [ ] **Kallie:** Upload actual Wix/cloud screenshots and an evaluated platform recommendation with cost, fit, scalability, and risk considerations.
+- [ ] **Ella:** Upload a completed WOC-specific risk register with **at least three rated risks** (likelihood, impact, control) and confirm the implementation plan.
+- [ ] **Team — Slide 8:** Add an actual AI/CRM interaction test, its observed result, a failure/escalation case, and human oversight.
+- [ ] **Team — Slides 5–6:** Confirm the real current-state process map, bottlenecks, future-state joins, and information flows.
+- [ ] **Shawn:** Check the **updated original HTML page** on desktop/mobile and confirm the public GitHub Pages link; record an authentic demonstration for Slide 10. The AI screenshots are currently linked from Google Drive rather than embedded in GitHub.
+- [ ] **Evelyn and team:** Replace draft slide claims with approved evidence, confirm the phased 30-day/60–90-day/6–12-month roadmap and adoption metrics, upload the **final** PowerPoint into `final-presentation/`, and rehearse.
 
-## Final evaluation
+## Repository and integrity notes
 
-Use [the rubric-to-evidence map](final-presentation/RUBRIC_EVIDENCE_MAP.md) before submitting. It distinguishes **verified files**, **proposed solutions**, and **missing evidence**. Do not present illustrative prototype numbers as dashboard findings or claim that controls or outcomes have been validated when they have not.
+The detailed rubric scores the repository **15 points** and presentation **85 points**; a contradictory 20/80 sentence also appears in its closing text. Confirm any ambiguity with the instructor. See the [rubric evidence map](final-presentation/RUBRIC_EVIDENCE_MAP.md).
 
-**Version-control integrity:** retain real commit dates and meaningful messages; do not reconstruct a fictional semester-long history. Future source artifacts should be committed as completed.
+Preserve actual commit dates and attribute work correctly. Do not invent missing lab evidence, earlier prompts, real business data, risk scores, or results that have not been tested.

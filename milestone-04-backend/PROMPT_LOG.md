@@ -16,11 +16,11 @@
 
 **Iteration during testing:** An initial test showed the error message for fractional conversions was overwritten by an unrelated customer-count warning; the code was revised to prioritize malformed input. A separate test expectation was corrected because Instagram's illustrative CAC ($90) is higher than Google Ads' ($75), so Instagram should have the longest CAC bar.
 
-**Observed results:** The exact JavaScript from this proposed GitHub branch passed **16 of 16 functional tests in an isolated V8 runtime with simulated DOM controls**, including live updates, sample totals, validation, zeros, comparison-bar widths and reset. This is not yet a complete visual/browser or deployed-site test.
+**Observed results:** The exact JavaScript from the improvement branch (later merged into GitHub `main`) passed **16 of 16 functional tests in an isolated V8 runtime with simulated DOM controls**, including live updates, sample totals, validation, zeros, comparison-bar widths and reset. This is not yet a complete visual/browser or deployed-site test.
 
 **Example calculations (hypothetical):** $4,700 ad spend, 290 platform conversions and 64 user-entered new customers lead to $16.21 cost per conversion and $73.44 illustrative CAC. Entered customer counts must still be verified in a real system.
 
-**Review before merge:** The code changes are proposed in a new pull request. They are a genuine November 14 refinement and should not be presented as earlier-semester work.
+**Merge status:** The improvements were merged into `main` through [Pull Request #3](https://github.com/shawncparkin/WOC-Marketing/pull/3). They are genuine November 14 refinements and should not be presented as earlier-semester work.
 
 ## Screenshot-backed ChatGPT prompts — November 14, 2026
 

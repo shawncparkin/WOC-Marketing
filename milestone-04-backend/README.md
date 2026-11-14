@@ -1,36 +1,36 @@
-# Milestone 4 — Sample CAC Calculator (new final-prep proof of concept)
+# Milestone 4 — AI-Assisted CAC Calculator Prototype
 
-**Open:** [cac-calculator.html](cac-calculator.html) in a modern browser. No installation, API keys or network access is required. If GitHub Pages is enabled, it may also be opened via the matching Pages path; validate that link before presenting.
+**Owner:** Shawn Parkin — prototype and GitHub coordination  
+**Code:** [cac-calculator.html](cac-calculator.html)  
+**AI development and iteration record:** [PROMPT_LOG.md](PROMPT_LOG.md)  
+**Project homepage:** [WOC Marketing website](../index.html)
 
-## Purpose and actual capabilities
-The static HTML page demonstrates the **calculation layer** of a proposed WOC marketing reporting workflow. Enter ad spend, platform conversions and user-supplied counts of verified new customers for three channels. It displays channel-level and portfolio-level cost-per-conversion and CAC, with warnings for impossible or missing inputs and safe handling of division by zero.
+## What the prototype actually does
 
-The built-in values are **hypothetical** (total spend $4,700; 290 conversions; 64 new customers). They produce cost per conversion **$16.21** and CAC **$73.44** when rounded to cents.
+This self-contained HTML, CSS, and JavaScript example lets users edit three channels' **advertising spend**, **platform-reported conversion count**, and **user-entered new-customer count**. It recalculates totals, channel-level cost per conversion, and **illustrative** channel CAC as values change. It checks invalid and impossible inputs and displays N/A instead of dividing by zero. The comparison bars represent the magnitude of channel CAC.
 
-**Limitations:** It does not ingest actual Tableau/CRM/ad-platform data, validate customer identity, attribute sales, preserve state, or perform AI inference. It is not evidence that WOC's real CAC has been determined. The root [index.html](../index.html) is a separate general WOC landing page.
+**Example data are fictional:** $4,700 total spend, 290 platform conversions, and 64 entered new customers, producing **$16.21 per conversion** and **$73.44 illustrative CAC**.
 
-## Demonstration checklist
-1. Open the calculator in a browser and show the sample-data disclosure.
-2. Explain cost per reported conversion versus spend per verified new customer.
-3. Change Google Ads spend from 2,400 to 3,000 and verify the results update.
-4. Set one channel's new-customer count to 0 and show its channel CAC becomes N/A.
-5. Enter more new customers than conversions and show the validation warning.
-6. Reset the sample inputs. Record a real screenshot and your observed results for final Slide 10.
+## Important limitation
 
-**Functional test update (Nov 14, 2026):** The exact JavaScript was checked in Chromium via a styled local test harness; 12/12 browser checks passed. See [PROMPT_LOG.md](PROMPT_LOG.md). Deployment and direct visual QA of this original HTML file are still pending. The revised [executive presentation](https://docs.google.com/presentation/d/1JiU53bI1YgGB2jtGWRkKk16eN0A1mvKlJ7MuFDC2BTY/edit) contains a screenshot of that browser harness and explanatory notes.
+The tool does **not** import WOC's actual campaigns, CRM, or transaction data. It does not verify whether a customer is genuinely new, deduplicate across platforms, or establish real attribution. **Cost per conversion is not verified CAC.** The website is a student proof of concept, not a production analytics system.
 
-**Rubric integrity:** This is a new AI-assisted prototype created during final preparation. It must not be represented as a completed earlier lab. Add actual prompts, iterations, test dates and observed outcomes in [PROMPT_LOG.md](PROMPT_LOG.md) as they occur.
+## AI assistance and tests
 
-## AI-assisted usability refinement (November 14, 2026)
+- ChatGPT helped review the project against the rubric and improve the calculator's HTML, CSS, and JavaScript.
+- An earlier version passed **12/12 Chromium checks using a local browser test harness with the same core JavaScript**.
+- The improved JavaScript passed **16/16 functional checks in an isolated V8 runtime with simulated DOM inputs**.
+- **Still needed:** test the revised original HTML visually in a normal desktop/mobile browser, confirm the GitHub Pages URL actually serves it, and capture a demonstration. Do not portray the prior tests as fully validating the deployed site.
+- The [prompt log](PROMPT_LOG.md) includes genuine conversation prompts, revisions, and **links to two screenshots hosted in Google Drive**. The images are not embedded in this GitHub repository; check instructor access.
 
-The calculator now provides **automatic aggregate and per-channel calculations** while typing:
-- **Cost per reported conversion** = spending / reported conversions.
-- **Illustrative customer acquisition cost** = spending / manually entered new customers.
-- Zero denominators display **N/A**, not an error or Infinity.
-- Negative spending, fractional conversions, impossible counts and spending beyond two decimal places are rejected with an inline warning.
-- Summary text shows combined conversions and entered customer counts.
-- The comparison chart depicts **illustrative CAC** consistently; a larger bar means a higher cost per entered new customer.
+## Suggested demonstration
 
-The totals assume channel customer counts do not overlap; this is **not verified** by the tool. Do not describe these fictional values as WOC real-world results. Follow-up test details and exact AI prompt are in [PROMPT_LOG.md](PROMPT_LOG.md).
+1. Open [the actual calculator](cac-calculator.html), explain the fictional-data warning, and identify the two different metrics.
+2. Change Google Ads spend from $2,400 to $3,000; the total should move to $5,300 and illustrative CAC to $82.81.
+3. Enter a negative spend or more new customers than reported conversions; show the validation message.
+4. Enter zero new customers for a channel; show N/A for that channel's CAC.
+5. Reset the example and explain what verified records would be required for real CAC.
 
-**Validation status:** The updated JavaScript passed 16/16 isolated V8 DOM-functional checks. The revised page still requires actual desktop/mobile visual inspection and deployment verification.
+**Rubric integrity:** The new calculator was created during November 2026 final-project preparation and is not evidence of an earlier completed semester lab. The log records the interactions that actually occurred.
+
+[Back to project README](../README.md).
