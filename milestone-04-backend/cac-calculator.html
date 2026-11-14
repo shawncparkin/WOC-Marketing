@@ -86,7 +86,7 @@ function recalculate(){
    el.setAttribute("aria-invalid",String(invalid));
    if(invalid)error="Enter nonnegative spending (up to 2 decimal places) and whole-number counts in every field.";
   }
-  if(values.customers>values.conversions){
+  if(!error&&values.customers>values.conversions){
    error="Verified new customers cannot exceed reported conversions in this simplified example.";
    tbody.querySelector('input[data-row="'+i+'"][data-key="customers"]').setAttribute("aria-invalid","true");
   }
