@@ -17,4 +17,20 @@ The built-in values are **hypothetical** (total spend $4,700; 290 conversions; 6
 5. Enter more new customers than conversions and show the validation warning.
 6. Reset the sample inputs. Record a real screenshot and your observed results for final Slide 10.
 
-**Functional test update (Nov 14, 2026):** The exact JavaScript was checked in Chromium via a styled local test harness; 12/12 browser checks passed. See [PROMPT_LOG.md](PROMPT_LOG.md). Deployment and direct visual QA of this original HTML file are still pending. The revised [executive presentation](https://docs.google.com/presentation/d/1JiU53bI1YgGB2jtGWRkKk16eN0A1mvKlJ7MuFDC2BTY/edit) contains a screenshot of that browser harness and explanatory notes.\n\n**Rubric integrity:** This is a new AI-assisted prototype created during final preparation. It must not be represented as a completed earlier lab. Add actual prompts, iterations, test dates and observed outcomes in [PROMPT_LOG.md](PROMPT_LOG.md) as they occur.
+**Functional test update (Nov 14, 2026):** The exact JavaScript was checked in Chromium via a styled local test harness; 12/12 browser checks passed. See [PROMPT_LOG.md](PROMPT_LOG.md). Deployment and direct visual QA of this original HTML file are still pending. The revised [executive presentation](https://docs.google.com/presentation/d/1JiU53bI1YgGB2jtGWRkKk16eN0A1mvKlJ7MuFDC2BTY/edit) contains a screenshot of that browser harness and explanatory notes.
+
+**Rubric integrity:** This is a new AI-assisted prototype created during final preparation. It must not be represented as a completed earlier lab. Add actual prompts, iterations, test dates and observed outcomes in [PROMPT_LOG.md](PROMPT_LOG.md) as they occur.
+
+## AI-assisted usability refinement (November 14, 2026)
+
+The calculator now provides **automatic aggregate and per-channel calculations** while typing:
+- **Cost per reported conversion** = spending / reported conversions.
+- **Illustrative customer acquisition cost** = spending / manually entered new customers.
+- Zero denominators display **N/A**, not an error or Infinity.
+- Negative spending, fractional conversions, impossible counts and spending beyond two decimal places are rejected with an inline warning.
+- Summary text shows combined conversions and entered customer counts.
+- The comparison chart depicts **illustrative CAC** consistently; a larger bar means a higher cost per entered new customer.
+
+The totals assume channel customer counts do not overlap; this is **not verified** by the tool. Do not describe these fictional values as WOC real-world results. Follow-up test details and exact AI prompt are in [PROMPT_LOG.md](PROMPT_LOG.md).
+
+**Validation status:** The updated JavaScript passed 16/16 isolated V8 DOM-functional checks. The revised page still requires actual desktop/mobile visual inspection and deployment verification.

@@ -11,8 +11,8 @@ header h1{font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.12;max-width:760px;ma
 .tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#e9c28e;font-weight:700}
 main{max-width:1100px;margin:24px auto;padding:0 20px 70px}.notice{background:#fff0d6;border:1px solid #edc47d;border-radius:12px;padding:14px 18px;margin-bottom:24px}
 section{background:white;border:1px solid var(--line);border-radius:16px;padding:24px;margin:20px 0;box-shadow:0 5px 22px #17362e09}
-h2{font-size:1.25rem;margin:0 0 10px}p{margin-top:0}.muted,small{color:#53645b}table{width:100%;border-collapse:collapse;min-width:630px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}th{font-size:12px;text-transform:uppercase;color:#526158;letter-spacing:.03em}
-.scroll{overflow-x:auto}input{width:100%;max-width:142px;padding:10px;border:1px solid #b9c9bd;border-radius:7px;font:inherit;background:white}
+h2{font-size:1.25rem;margin:0 0 10px}p{margin-top:0}.muted,small{color:#53645b}table{width:100%;border-collapse:collapse;min-width:790px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}th{font-size:12px;text-transform:uppercase;color:#526158;letter-spacing:.03em}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px}input{width:100%;max-width:142px;padding:10px;border:1px solid #b9c9bd;border-radius:7px;font:inherit;background:white}
 input:focus{outline:3px solid #c4e6d0;outline-offset:1px}input[aria-invalid=true]{border-color:var(--red);background:#fff5f5}
 button{background:var(--forest);color:white;border:0;border-radius:8px;padding:11px 17px;font:inherit;font-weight:650;cursor:pointer}button:hover{background:var(--green)}
 .actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:18px}
@@ -22,6 +22,9 @@ button{background:var(--forest);color:white;border:0;border-radius:8px;padding:1
 #message{font-weight:650;color:var(--red);min-height:24px}#breakdown>div{margin:12px 0}
 .bar-label{display:flex;justify-content:space-between;gap:12px;font-size:14px}.bar{height:14px;background:#edf3ed;border-radius:100px;overflow:hidden;margin-top:5px}
 .bar i{display:block;background:var(--green);height:100%;min-width:0;transition:width .2s}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.help{font-size:.9rem;color:#53645b;margin:.8rem 0 0}
+#breakdown h3{font-size:1.05rem;margin:22px 0 10px}
 footer{color:#5f6e63;font-size:13px;margin:24px 0}code{background:#f0f2ee;padding:2px 5px;border-radius:4px}
 @media(max-width:720px){.metrics{grid-template-columns:1fr}section{padding:18px}}
 </style>
@@ -31,16 +34,17 @@ footer{color:#5f6e63;font-size:13px;margin:24px 0}code{background:#f0f2ee;paddin
 <p>A working browser-only proof of concept for comparing advertising spend, reported conversions, and <strong>verified new customers</strong>.</p></header>
 <main>
 <div class="notice"><strong>Illustrative demo — not real WOC performance data.</strong> The default numbers are made up solely to demonstrate calculations. This page does not connect to advertising, CRM, or sales systems.</div>
-<section><h2>1. Enter channel-level inputs</h2><p class="muted">Amounts are in dollars. Enter nonnegative values; customer counts must be whole numbers, and verified new customers cannot exceed reported conversions in this simplified model.</p>
-<div class="scroll"><table><thead><tr><th>Channel</th><th>Ad spend ($)</th><th>Platform conversions</th><th>Verified new customers</th><th>Channel CAC</th></tr></thead><tbody id="inputs"></tbody></table></div>
-<div class="actions"><button id="calculate" type="button">Recalculate metrics</button><button id="reset" type="button">Reset example</button><span id="message" role="alert" aria-live="polite"></span></div>
+<section><h2>1. Enter channel-level inputs</h2><p class="muted">Results update automatically. Enter advertising costs in dollars, whole-number conversion counts, and the number of first-time customers attributed to each channel.</p>
+<div class="scroll"><table><caption class="sr-only">Editable campaign inputs and calculated costs for each channel</caption><thead><tr><th scope="col">Channel</th><th scope="col">Advertising spend ($)</th><th scope="col">Reported conversions</th><th scope="col">New customers (entered)</th><th scope="col">Cost / conversion</th><th scope="col">Illustrative CAC</th></tr></thead><tbody id="inputs"></tbody></table></div>
+<p class="help">The calculator does not independently verify customer identity or cross-channel attribution. Treat the new-customer values as assumptions until confirmed with CRM and sales records.</p>
+<div class="actions"><button id="calculate" type="button">Check calculations</button><button id="reset" type="button">Reset example</button><span id="message" role="alert" aria-live="polite"></span></div>
 </section>
 <section><h2>2. Measurement results</h2><p class="muted">CAC only makes sense when customer identity and spend attribution have actually been verified upstream.</p>
-<div class="metrics"><div class="metric"><span>Total advertising spend</span><b id="spendTotal">—</b></div><div class="metric"><span>Cost per platform conversion</span><b id="cpc">—</b></div><div class="metric"><span>Cost per verified new customer (CAC)</span><b id="cac">—</b></div></div>
-<div id="breakdown" aria-live="polite"></div></section>
+<div class="metrics"><div class="metric"><span>Total advertising spend</span><b id="spendTotal">—</b></div><div class="metric"><span>Cost per platform conversion</span><b id="cpc">—</b></div><div class="metric"><span>Illustrative CAC (entered new customers)</span><b id="cac">—</b></div></div>
+<p class="help" id="totals" aria-live="polite"></p><div id="breakdown" aria-live="polite"></div></section>
 <section><h2>3. What the demonstration does — and does not — establish</h2>
-<p><strong>Calculates:</strong> spend divided by platform conversions, and spend divided by new-customer counts supplied by the user. It handles missing denominators and invalid values.</p>
-<p><strong>Does not calculate:</strong> verified real-world CAC independently. It cannot confirm whether the manually entered customers are first-time buyers, deduplicate real CRM records, prove campaign attribution, or infer incremental return on ad spend.</p>
+<p><strong>Calculates:</strong> ad spend divided by reported conversions, and ad spend divided by entered first-time customer counts. Both update immediately when an input changes.</p>
+<p><strong>Does not verify true CAC independently.</strong> The user must confirm first-time customer identities, prevent customers from being counted by multiple channels, and align spend and acquisition periods. This demo does not connect to a CRM, validate campaign attribution, or calculate incremental return on ad spend.</p>
 <p><strong>Next production step:</strong> connect approved source systems, reconcile unique customer IDs with actual transactions, set attribution policy, and review exceptions with a human analyst before publishing executive metrics.</p>
 </section><footer>WOC Marketing Team · Proof of concept · No tracking scripts, external dependencies, or persistent storage</footer>
 </main>
@@ -60,10 +64,13 @@ function renderInputs(){
   const label=document.createElement("th");label.scope="row";label.textContent=row.name;tr.appendChild(label);
   for(const key of ["spend","conversions","customers"]){
    const td=document.createElement("td"),el=document.createElement("input");
-   el.type="number";el.min="0";el.step=key==="spend"?"0.01":"1";el.value=String(row[key]);el.dataset.row=String(i);el.dataset.key=key;el.setAttribute("aria-label",row.name+" "+key);
+   el.type="number";el.min="0";el.step=key==="spend"?"0.01":"1";el.inputMode=key==="spend"?"decimal":"numeric";el.value=String(row[key]);el.dataset.row=String(i);el.dataset.key=key;el.setAttribute("aria-label",row.name+" "+key);
    el.addEventListener("input",recalculate);td.appendChild(el);tr.appendChild(td);
   }
-  const out=document.createElement("td");out.id="row-cac-"+i;out.textContent="—";tr.appendChild(out);tbody.appendChild(tr);
+  for(const metric of ["cpc","cac"]){
+   const out=document.createElement("td");out.id="row-"+metric+"-"+i;out.textContent="—";tr.appendChild(out);
+  }
+  tbody.appendChild(tr);
  });
  recalculate();
 }
@@ -75,11 +82,11 @@ function recalculate(){
   for(const key of ["spend","conversions","customers"]){
    const el=tbody.querySelector('input[data-row="'+i+'"][data-key="'+key+'"]');
    const raw=el.value.trim();const n=Number(raw);values[key]=n;
-   let invalid=raw===""||!Number.isFinite(n)||n<0||(key!=="spend"&&!Number.isInteger(n));
+   let invalid=raw===""||!Number.isFinite(n)||n<0||(key==="spend"&&(n>1e9||Math.abs(n*100-Math.round(n*100))>1e-6))||(key!=="spend"&&(!Number.isInteger(n)||n>1e8));
    el.setAttribute("aria-invalid",String(invalid));
-   if(invalid)error="Enter nonnegative spend and whole-number counts in every field.";
+   if(invalid)error="Enter nonnegative spending (up to 2 decimal places) and whole-number counts in every field.";
   }
-  if(values.customers>values.conversions){
+  if(!error&&values.customers>values.conversions){
    error="Verified new customers cannot exceed reported conversions in this simplified example.";
    tbody.querySelector('input[data-row="'+i+'"][data-key="customers"]').setAttribute("aria-invalid","true");
   }
@@ -88,21 +95,27 @@ function recalculate(){
  document.getElementById("message").textContent=error;
  if(error){
   for(const id of ["spendTotal","cpc","cac"])document.getElementById(id).textContent="—";
-  for(let i=0;i<rows.length;i++)document.getElementById("row-cac-"+i).textContent="—";
+  for(let i=0;i<rows.length;i++)for(const metric of ["cpc","cac"])document.getElementById("row-"+metric+"-"+i).textContent="—";
+  document.getElementById("totals").textContent="Correct invalid entries to view updated results.";
   document.getElementById("breakdown").replaceChildren();return;
  }
  rows.forEach((row,i)=>{
   spend+=row.spend;conversions+=row.conversions;customers+=row.customers;
-  document.getElementById("row-cac-"+i).textContent=row.customers?money(row.spend/row.customers):"N/A — no new customers";
+  document.getElementById("row-cpc-"+i).textContent=row.conversions?money(row.spend/row.conversions):"N/A";
+  document.getElementById("row-cac-"+i).textContent=row.customers?money(row.spend/row.customers):"N/A";
  });
  document.getElementById("spendTotal").textContent=money(spend);
  document.getElementById("cpc").textContent=conversions?money(spend/conversions):"N/A";
  document.getElementById("cac").textContent=customers?money(spend/customers):"N/A";
+ document.getElementById("totals").textContent="Across "+rows.length+" channels: "+conversions.toLocaleString("en-US")+" reported conversions and "+customers.toLocaleString("en-US")+" entered new customers (assumed unique across channels).";
  const breakdown=document.getElementById("breakdown");breakdown.replaceChildren();
+ const heading=document.createElement("h3");heading.textContent="Illustrative CAC by channel (shorter bar = lower cost)";breakdown.appendChild(heading);
+ const maxCAC=Math.max(0,...rows.filter(row=>row.customers>0).map(row=>row.spend/row.customers));
  rows.forEach(row=>{
   const wrapper=document.createElement("div"),line=document.createElement("div"),bar=document.createElement("div"),fill=document.createElement("i"),name=document.createElement("strong"),val=document.createElement("span");
   line.className="bar-label";bar.className="bar";name.textContent=row.name;val.textContent=row.customers?money(row.spend/row.customers):"N/A";
-  fill.style.width=customers?String(Math.min(100,100*row.customers/customers))+"%":"0%";
+  fill.style.width=row.customers>0&&maxCAC>0?String(Math.min(100,100*(row.spend/row.customers)/maxCAC))+"%":"0%";
+  bar.setAttribute("aria-label",row.name+" illustrative CAC: "+val.textContent);
   line.append(name,val);bar.appendChild(fill);wrapper.append(line,bar);breakdown.appendChild(wrapper);
  });
 }
