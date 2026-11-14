@@ -24,10 +24,10 @@
 
 ## Screenshot-backed ChatGPT prompts — November 14, 2026
 
-These are actual conversations documented by the two screenshots I provided to ChatGPT. The screenshots are **not yet uploaded into this repository**; their filenames are recorded so they can be added as evidence files later. They should not be presented as interactions from earlier in the semester.
+These are actual conversations documented by the two screenshots I provided to ChatGPT. Original screenshot images are preserved as linked Google Drive evidence; the images are **not stored as GitHub repository binaries**. They should not be presented as interactions from earlier in the semester.
 
 ### Evidence A — Website code and rubric review
-**Screenshot:** `chat doing it's thing.PNG`
+**Screenshot evidence:** [View original code review screenshot](https://drive.google.com/file/d/1RyxvnJ9P-gptRFJ4RdDegJVMz28SOfQ6/view?usp=drivesdk) (uploaded as `chat doing it's thing.PNG`)
 
 **My exact prompt:**
 > Can you review the HTML, CSS, and JavaScript for my WOC Marketing website and identify any errors or improvements? I want to make sure everything works correctly and meets my KPMG final project rubric.
@@ -37,7 +37,7 @@ These are actual conversations documented by the two screenshots I provided to C
 **What I learned:** Reviewing the source code against specific grading requirements helped prioritize corrections to the page and the demo.
 
 ### Evidence B — Calculator coding improvement
-**Screenshot:** `chat doing its thing again.PNG`
+**Screenshot evidence:** [View original calculator improvement screenshot](https://drive.google.com/file/d/1EUjO3Fr-0s4wIFL_l4w3SCaLZbqoy7lJ/view?usp=drivesdk) (uploaded as `chat doing its thing again.PNG`)
 
 **My exact prompt:**
 > Can you help me improve my WOC Marketing customer acquisition cost calculator? I want users to enter advertising expenses, conversions, and new customers, then automatically calculate the results. Please explain what changes you're making to the code.
@@ -51,4 +51,4 @@ These are actual conversations documented by the two screenshots I provided to C
 **Code change:** [Pull Request #3](https://github.com/shawncparkin/WOC-Marketing/pull/3).
 
 ### Screenshot upload status
-The two original screenshot images were supplied in the ChatGPT conversation but **are not yet stored in GitHub**. To display them inline in this log, upload both PNG files to `milestone-04-backend/evidence/` and replace this note with relative Markdown image references. This text records the prompt and result accurately in the meantime.
+Both original screenshot files are linked above from the project's Google Drive evidence copies. They are **not embedded in the GitHub repository**, and access for instructors depends on Google Drive sharing permissions. For a completely self-contained GitHub submission, upload both PNGs to `milestone-04-backend/evidence/` and use relative Markdown links instead.
