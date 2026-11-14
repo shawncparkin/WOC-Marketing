@@ -21,3 +21,34 @@
 **Example calculations (hypothetical):** $4,700 ad spend, 290 platform conversions and 64 user-entered new customers lead to $16.21 cost per conversion and $73.44 illustrative CAC. Entered customer counts must still be verified in a real system.
 
 **Review before merge:** The code changes are proposed in a new pull request. They are a genuine November 14 refinement and should not be presented as earlier-semester work.
+
+## Screenshot-backed ChatGPT prompts — November 14, 2026
+
+These are actual conversations documented by the two screenshots I provided to ChatGPT. The screenshots are **not yet uploaded into this repository**; their filenames are recorded so they can be added as evidence files later. They should not be presented as interactions from earlier in the semester.
+
+### Evidence A — Website code and rubric review
+**Screenshot:** `chat doing it's thing.PNG`
+
+**My exact prompt:**
+> Can you review the HTML, CSS, and JavaScript for my WOC Marketing website and identify any errors or improvements? I want to make sure everything works correctly and meets my KPMG final project rubric.
+
+**What ChatGPT identified:** The general homepage still had placeholder teammates and outdated milestone status information; it lacked a direct link to the CAC calculator; mobile navigation was hidden; the page should emphasize our Marketing track; and the calculator's comparison-bar widths originally measured customer share even though the labels showed CAC. ChatGPT explained how these issues relate to the rubric's functioning-prototype and professional-communication criteria.
+
+**What I learned:** Reviewing the source code against specific grading requirements helped prioritize corrections to the page and the demo.
+
+### Evidence B — Calculator coding improvement
+**Screenshot:** `chat doing its thing again.PNG`
+
+**My exact prompt:**
+> Can you help me improve my WOC Marketing customer acquisition cost calculator? I want users to enter advertising expenses, conversions, and new customers, then automatically calculate the results. Please explain what changes you're making to the code.
+
+**Changes made with AI assistance:** ChatGPT improved the existing HTML, CSS and JavaScript rather than recreating the calculator. The changes added per-channel cost per conversion alongside illustrative CAC; clearer automatically updating totals; input validation for negative, fractional and invalid values; more accurate comparison-bar lengths; and clearer explanations that the figures use fictional data.
+
+**Coding iteration and verification:** One test exposed an error-message priority issue when a fractional conversion count was entered, which led to a code correction. The updated JavaScript then passed **16 of 16 functional tests with simulated DOM controls**. The tests are evidence of calculation logic, not complete visual testing of the public site.
+
+**Fictional demonstration totals:** $4,700 in advertising spend, $16.21 cost per conversion, and $73.44 illustrative CAC. This is not verified real WOC CAC.
+
+**Code change:** [Pull Request #3](https://github.com/shawncparkin/WOC-Marketing/pull/3).
+
+### Screenshot upload status
+The two original screenshot images were supplied in the ChatGPT conversation but **are not yet stored in GitHub**. To display them inline in this log, upload both PNG files to `milestone-04-backend/evidence/` and replace this note with relative Markdown image references. This text records the prompt and result accurately in the meantime.
