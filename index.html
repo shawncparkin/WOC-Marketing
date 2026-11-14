@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WOC Consulting Project — Demo</title>
+  <title>WOC Marketing Team | Consulting Challenge</title>
+  <meta name="description" content="WOC Marketing Team: business challenge, Tableau findings, customer acquisition cost calculator, and project evidence.">
 
   <style>
     :root {
@@ -448,22 +449,70 @@
         flex-direction: column;
       }
     }
+  
+    /* Track G marketing homepage enhancements */
+    html{scroll-padding-top:95px}
+    a:focus-visible{outline:3px solid #d49861;outline-offset:3px}
+    header{gap:12px;flex-wrap:wrap}
+    nav.header-nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    nav.header-nav a{padding:8px 11px;border-radius:7px}
+    nav.header-nav a:hover{background:var(--cream)}
+    nav.header-nav a.cta{background:var(--dark-green);color:white}
+    nav.header-nav a.cta:hover{background:var(--green);color:white}
+    .hero{min-height:570px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-actions .button.secondary{background:transparent;color:var(--dark-green);border:1px solid var(--dark-green)}
+    .hero .hero-note{font-size:13px}
+    .focus-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+    .focus-grid .card{min-height:210px}
+    .decision{margin-top:22px;padding:22px 26px;border-radius:12px;color:white;background:var(--dark-green);border-left:6px solid var(--light-green)}
+    .decision strong{color:var(--light-green);display:block;margin-bottom:7px}
+    .decision p{margin:0}
+    .evidence-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+    .dashboard{background:white;padding:10px;border-radius:11px;margin:0}
+    .dashboard img{display:block;width:100%;height:auto}
+    .dashboard figcaption{margin-top:8px;color:var(--gray);font-size:12px}
+    .channel-stat{display:flex;align-items:center;justify-content:space-between;gap:10px;border-radius:8px;background:white;padding:12px;margin-bottom:9px}
+    .channel-stat span{color:var(--gray);font-size:14px}
+    .channel-stat strong{color:var(--dark-green);font-variant-numeric:tabular-nums;font-size:22px}
+    .summary{background:#e7f2e7;border-radius:9px;padding:14px 17px;color:var(--text);font-size:14px}
+    .summary p{margin:0}
+    .prototype-panel{background:var(--dark-green);color:white;border-radius:14px;padding:42px}
+    .prototype-panel h2{font-size:clamp(31px,4vw,47px);margin:10px 0 12px;line-height:1.12}
+    .prototype-panel .button{background:var(--light-green);color:var(--dark-green);border:1px solid var(--light-green)}
+    .prototype-panel .button.secondary{background:transparent;color:white;border:1px solid #98b1a1}
+    .prototype-panel p{color:#dae8de}
+    .metric-preview{display:flex;flex-wrap:wrap;gap:12px;margin-top:19px}
+    .metric-preview div{flex:1;min-width:200px;background:#1f523e;border-radius:8px;padding:15px}
+    .metric-preview span{display:block;color:#c1deca;font-size:12px}
+    .metric-preview strong{color:var(--light-green);font-size:27px}
+    .milestone.ready{border-color:#7eb77a}
+    .milestone.pending{border-color:var(--orange)}
+    .milestone.pending .status{background:#f9e4d7;color:#8c3b1c}
+    .milestone a{color:var(--green);font-size:12px;font-weight:bold}
+    .team-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+    .member{padding:18px;min-width:0}
+    .member h3{font-size:17px;line-height:1.22}
+    .member p{font-size:12px}
+    .member .role{color:var(--dark-green);font-weight:bold}
+    @media(max-width:1060px){.team-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:850px){nav.header-nav{display:flex}.evidence-layout{grid-template-columns:1fr}.focus-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:550px){nav.header-nav{display:flex;gap:3px}nav.header-nav a{padding:6px;font-size:12px}.hero-actions{display:block}.hero-actions .button{margin-top:9px}.focus-grid,.team-grid{grid-template-columns:1fr}.prototype-panel{padding:28px 18px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
   </style>
 </head>
 
 <body>
 
   <header>
-    <a class="logo" href="#home">
-      WASATCH OUTFITTERS
-      <small>Consulting Project</small>
-    </a>
-
-    <nav>
+    <a class="logo" href="#home">WASATCH OUTFITTERS<small>Marketing Consulting · Track G</small></a>
+    <nav class="header-nav" aria-label="Main navigation">
       <a href="#challenge">Challenge</a>
-      <a href="#tracks">Tracks</a>
+      <a href="#evidence">Data</a>
+      <a href="#prototype">Prototype</a>
       <a href="#milestones">Milestones</a>
       <a href="#team">Team</a>
+      <a class="cta" href="milestone-04-backend/cac-calculator.html">Try calculator</a>
     </nav>
   </header>
 
@@ -471,244 +520,79 @@
 
     <section class="hero" id="home">
       <div class="hero-content">
-        <div class="demo">Student Project Demo</div>
-
-        <div class="eyebrow">
-          KPMG-Sponsored IS Consulting Challenge
+        <div class="demo">University of Utah · KPMG-Sponsored Student Project</div>
+        <div class="eyebrow">Track G · Marketing Information Systems</div>
+        <h1>Better marketing data.<br><span>Smarter decisions.</span></h1>
+        <p>Our team is developing a practical approach to connect WOC's advertising spending, customer information, and sales so leaders can make better marketing decisions.</p>
+        <p class="hero-note">Our calculator uses fictional sample values and does not independently measure WOC's real customer acquisition cost.</p>
+        <div class="hero-actions">
+          <a class="button" href="milestone-04-backend/cac-calculator.html">Try our CAC Calculator &rarr;</a>
+          <a class="button secondary" href="#evidence">See the Tableau evidence</a>
         </div>
-
-        <h1>
-          Building a smarter path forward for
-          <span>Wasatch Outfitters.</span>
-        </h1>
-
-        <p>
-          A practical information systems strategy designed to connect
-          people, processes, and data while supporting WOC's continued growth.
-        </p>
-
-        <a class="button" href="#challenge">
-          Explore the challenge →
-        </a>
       </div>
-
-      <div class="mountains">▲</div>
+      <div class="mountains" aria-hidden="true">▲</div>
     </section>
 
     <section id="challenge">
       <div class="section-heading">
-        <div>
-          <div class="eyebrow">The Business Challenge</div>
-          <h2>Growth created opportunity. Fragmented systems created risk.</h2>
-        </div>
-
-        <p>
-          Wasatch Outfitters Collective has a loyal customer base and a strong
-          regional brand. However, its rapid growth has outpaced its internal
-          technology, financial systems, and business processes.
-        </p>
+        <div><div class="eyebrow">The Marketing Challenge</div><h2>Making campaign spending easier to understand.</h2></div>
+        <p>WOC relies on separate marketing-platform reports. Those conversions cannot automatically be treated as first-time customers, making true customer acquisition cost difficult to measure.</p>
       </div>
-
-      <div class="problem-grid">
-
-        <article class="card">
-          <span class="card-number">01</span>
-          <h3>Operations</h3>
-          <p>
-            Disconnected rental and repair spreadsheets cause double-bookings
-            and unavailable equipment.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">02</span>
-          <h3>Customer Support</h3>
-          <p>
-            Questions spread across phone, email, social media, and stores
-            result in inconsistent answers.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">03</span>
-          <h3>Accounting</h3>
-          <p>
-            Manual reconciliation leaves nearly 30% of expenses unmatched
-            because receipts are missing.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">04</span>
-          <h3>Finance</h3>
-          <p>
-            Capital purchases lack a standardized method for measuring
-            location-specific return on investment.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">05</span>
-          <h3>Supply Chain</h3>
-          <p>
-            Late shipments are often discovered only after a store reports
-            empty shelves.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">06</span>
-          <h3>Marketing</h3>
-          <p>
-            Separate advertising platforms make the true customer acquisition
-            cost difficult to calculate.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">07</span>
-          <h3>Cybersecurity</h3>
-          <p>
-            Informal employee offboarding leaves some former seasonal workers
-            with active system access.
-          </p>
-        </article>
-
+      <div class="focus-grid">
+        <article class="card"><span class="card-number">01</span><h3>Disconnected reports</h3><p>Google, Instagram, and email data use different sources and measurement assumptions.</p></article>
+        <article class="card"><span class="card-number">02</span><h3>Conversions are not customers</h3><p>Cost per reported conversion is not verified new-customer acquisition cost.</p></article>
+        <article class="card"><span class="card-number">03</span><h3>Better decisions</h3><p>Linking campaign, customer, and sales data helps WOC decide what to improve and test.</p></article>
       </div>
+      <div class="decision"><strong>Our recommendation</strong><p>Pilot a low-cost, governed reporting process that validates customer data and makes channel performance understandable.</p></div>
     </section>
 
-    <section class="tracks-section" id="tracks">
+    <section class="tracks-section" id="evidence">
       <div class="section-heading">
-        <div>
-          <div class="eyebrow">Consulting Tracks</div>
-          <h2>Seven perspectives. One connected business.</h2>
-        </div>
-
-        <p>
-          Each team selects one consulting track and develops a practical
-          recommendation for WOC.
-        </p>
+        <div><div class="eyebrow">Our Data Evidence</div><h2>What the Tableau dashboard shows.</h2></div>
+        <p>The team's analysis found meaningful differences in cost per reported conversion. These results help WOC identify further opportunities to test and investigate.</p>
       </div>
-
-      <div class="tracks">
-
-        <article class="track">
-          <span>TRACK A</span>
-          <h3>Digital Transformation</h3>
-          <p>
-            Redesign fragmented workflows and select a practical digital
-            solution to improve operations.
-          </p>
-        </article>
-
-        <article class="track">
-          <span>TRACK B</span>
-          <h3>AI and Analytics</h3>
-          <p>
-            Use dashboards, customer data, and responsible AI to improve
-            decisions and customer support.
-          </p>
-        </article>
-
-        <article class="track">
-          <span>TRACK C</span>
-          <h3>Cyber and Risk</h3>
-          <p>
-            Reduce cybersecurity, privacy, AI, and vendor risks while
-            continuing to modernize.
-          </p>
-        </article>
-
-        <article class="track">
-          <span>TRACK D</span>
-          <h3>Accounting</h3>
-          <p>
-            Automate and secure WOC's fragmented expense reconciliation
-            process.
-          </p>
-        </article>
-
-        <article class="track">
-          <span>TRACK E</span>
-          <h3>Finance</h3>
-          <p>
-            Use data to evaluate capital investments and forecast
-            location-specific ROI.
-          </p>
-        </article>
-
-        <article class="track">
-          <span>TRACK F</span>
-          <h3>Supply Chain</h3>
-          <p>
-            Digitize vendor management to reduce lead times and prevent
-            inventory stockouts.
-          </p>
-        </article>
-
-        <article class="track">
-          <span>TRACK G</span>
-          <h3>Marketing</h3>
-          <p>
-            Integrate digital marketing data to calculate the true customer
-            acquisition cost.
-          </p>
-        </article>
-
+      <div class="evidence-layout">
+        <figure class="dashboard">
+          <a href="milestone-01-tableau/WOC_Marketing_Dashboard.png" title="Open full-size Tableau dashboard"><img src="milestone-01-tableau/WOC_Marketing_Dashboard.png" alt="WOC Tableau dashboard comparing channel revenue, ad spend, and cost per reported conversion" loading="lazy"></a>
+          <figcaption>WOC Marketing dashboard · <a href="milestone-01-tableau/WOC_Marketing_Dashboard_Final.twbx">Tableau workbook</a></figcaption>
+        </figure>
+        <div>
+          <p style="margin:0 0 14px;color:var(--light-green);font-size:13px;font-weight:bold">COST PER REPORTED CONVERSION</p>
+          <div class="channel-stat"><span>Email Newsletter</span><strong>$2.91</strong></div>
+          <div class="channel-stat"><span>Instagram Ads</span><strong>$12.87</strong></div>
+          <div class="channel-stat"><span>Google Search</span><strong>$40.55</strong></div>
+          <div class="channel-stat"><span>Local Radio</span><strong>$41.53</strong></div>
+          <div class="summary"><p><strong>Insight:</strong> Email has the lowest reported conversion cost, followed by Instagram. Reliable first-time customer data is still needed for true CAC.</p></div>
+          <p style="font-size:12px;color:#dae8dc">Source: <a style="color:var(--light-green)" href="milestone-01-tableau/WOC_Tableau_Performance_Analysis_Revised_Sean.docx">Sean Siracusa's performance analysis</a>. These are not verified CAC figures.</p>
+        </div>
+      </div>
+    </section>
+    <section id="prototype">
+      <div class="prototype-panel">
+        <div class="eyebrow" style="color:var(--light-green)">AI-Assisted Coding</div>
+        <h2>Try our interactive CAC calculator.</h2>
+        <p>Enter advertising spending, reported conversions, and new-customer counts. The tool updates automatically, calculates each channel's illustrative CAC, and flags invalid inputs.</p>
+        <div class="hero-actions">
+          <a class="button" href="milestone-04-backend/cac-calculator.html">Launch calculator &rarr;</a>
+          <a class="button secondary" href="milestone-04-backend/PROMPT_LOG.md">AI development log</a>
+        </div>
+        <div class="metric-preview"><div><span>Sample cost per conversion</span><strong>$16.21</strong></div><div><span>Sample illustrative CAC</span><strong>$73.44</strong></div></div>
+        <p style="font-size:12px">These figures use invented example data: $4,700 of spending, 290 conversions, and 64 user-entered new customers. No live WOC CRM or advertising integration is implied.</p>
       </div>
     </section>
 
     <section class="milestones" id="milestones">
       <div class="section-heading">
-        <div>
-          <div class="eyebrow">Project Roadmap</div>
-          <h2>Evidence built one milestone at a time.</h2>
-        </div>
-
-        <p>
-          Each milestone becomes the foundation for the next part of the
-          consulting recommendation.
-        </p>
+        <div><div class="eyebrow">Project Milestones</div><h2>Evidence built one milestone at a time.</h2></div>
+        <p>These statuses describe artifacts currently visible in GitHub, not instructor approval or full completion of the course labs.</p>
       </div>
-
       <div class="timeline">
-
-        <article class="milestone complete">
-          <span class="status">Complete</span>
-          <h3>Milestone 1</h3>
-          <p>Define the business problem and identify stakeholder needs.</p>
-        </article>
-
-        <article class="milestone current">
-          <span class="status">In Progress</span>
-          <h3>Milestone 2</h3>
-          <p>Analyze data and develop useful managerial insights.</p>
-        </article>
-
-        <article class="milestone">
-          <span class="status">Upcoming</span>
-          <h3>Milestone 3</h3>
-          <p>Evaluate the current process and identify bottlenecks.</p>
-        </article>
-
-        <article class="milestone">
-          <span class="status">Upcoming</span>
-          <h3>Milestone 4</h3>
-          <p>Build and evaluate a practical solution prototype.</p>
-        </article>
-
-        <article class="milestone">
-          <span class="status">Upcoming</span>
-          <h3>Milestone 5</h3>
-          <p>Address cybersecurity, privacy, ethics, and governance risks.</p>
-        </article>
-
-        <article class="milestone">
-          <span class="status">Upcoming</span>
-          <h3>Milestone 6</h3>
-          <p>Deliver the implementation plan and executive recommendation.</p>
-        </article>
-
+        <article class="milestone ready"><span class="status">Files uploaded</span><h3>01 · Tableau</h3><p>Dashboard, workbook, and performance analysis.</p><a href="milestone-01-tableau/">View files</a></article>
+        <article class="milestone ready"><span class="status">Files uploaded</span><h3>02 · SQL</h3><p>SQL schema and relationship documentation.</p><a href="milestone-02-sql/">View files</a></article>
+        <article class="milestone pending"><span class="status">Evidence pending</span><h3>03 · Wix &amp; Cloud</h3><p>Wix screenshots and platform comparison are not yet in GitHub.</p><a href="milestone-03-wix-cloud/">View folder</a></article>
+        <article class="milestone ready"><span class="status">Prototype uploaded</span><h3>04 · Vibe Coding</h3><p>Working sample calculator, AI log, and test documentation.</p><a href="milestone-04-backend/">View files</a></article>
+        <article class="milestone pending"><span class="status">Final review pending</span><h3>05 · Cybersecurity</h3><p>Risk template exists; team-approved ratings and controls are pending.</p><a href="milestone-05-cybersecurity/">View folder</a></article>
+        <article class="milestone pending"><span class="status">Draft available</span><h3>06 · Implementation</h3><p>Information-design document exists; rollout metrics need review.</p><a href="milestone-06-implementation/">View folder</a></article>
       </div>
     </section>
 
@@ -717,8 +601,7 @@
         <div class="eyebrow" style="color: white;">Our Goal</div>
 
         <h2>
-          Recommend a practical improvement that WOC can implement within
-          six to twelve months.
+          Recommend a measurable, responsible marketing reporting process that WOC can implement in stages.
         </h2>
 
         <div class="values">
@@ -732,57 +615,23 @@
 
     <section id="team">
       <div class="section-heading">
-        <div>
-          <div class="eyebrow">The Consulting Team</div>
-          <h2>Built collaboratively.</h2>
-        </div>
-
-        <p>
-          Replace the placeholder names and roles with your actual group
-          members.
-        </p>
+        <div><div class="eyebrow">The Consulting Team</div><h2>Built collaboratively.</h2></div>
+        <p>Our five University of Utah teammates and their project responsibilities.</p>
       </div>
-
       <div class="team-grid">
-
-        <article class="member">
-          <div class="avatar">SP</div>
-          <h3>Shawn Parkin</h3>
-          <p>Team Member</p>
-          <a href="https://github.com/shawncparkin" target="_blank">
-            GitHub Profile →
-          </a>
-        </article>
-
-        <article class="member">
-          <div class="avatar">01</div>
-          <h3>Team Member</h3>
-          <p>Role or Specialty</p>
-          <a href="#">Add Profile →</a>
-        </article>
-
-        <article class="member">
-          <div class="avatar">02</div>
-          <h3>Team Member</h3>
-          <p>Role or Specialty</p>
-          <a href="#">Add Profile →</a>
-        </article>
-
-        <article class="member">
-          <div class="avatar">03</div>
-          <h3>Team Member</h3>
-          <p>Role or Specialty</p>
-          <a href="#">Add Profile →</a>
-        </article>
-
+        <article class="member"><div class="avatar">SP</div><h3>Shawn Parkin</h3><p class="role">Technology Builder</p><p>AI-assisted prototype and GitHub coordination.</p><a href="https://github.com/shawncparkin" target="_blank" rel="noopener noreferrer">GitHub profile &rarr;</a></article>
+        <article class="member"><div class="avatar">KN</div><h3>Kallie Northrop</h3><p class="role">Solution Designer</p><p>Wix interface and cloud evaluation.</p></article>
+        <article class="member"><div class="avatar">ER</div><h3>Evelyn Teoyotl Rojas</h3><p class="role">Presentation Coordination</p><p>Project and executive presentation coordination.</p></article>
+        <article class="member"><div class="avatar">ET</div><h3>Ella Todd</h3><p class="role">Risk &amp; Governance</p><p>Risk register and implementation planning.</p></article>
+        <article class="member"><div class="avatar">SS</div><h3>Sean Siracusa</h3><p class="role">Data Analyst</p><p>Tableau dashboard and SQL work.</p></article>
       </div>
     </section>
 
   </main>
 
   <footer>
-    <strong>Wasatch Outfitters Consulting Project</strong>
-    <span>IS 3060 · Student Project · <strong>DEMO</strong></span>
+    <strong>WOC Marketing Consulting Team</strong>
+    <span>University of Utah · Track G · Student Project</span>
     <span>Salt Lake City, Utah</span>
   </footer>
 
