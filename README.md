@@ -4,6 +4,7 @@
 **Track:** G — Marketing  
 **University:** University of Utah  
 **Team:** Shawn Parkin · Sean Siracusa · Kallie Northrop · Ella Todd · Evelyn Teoyotl Rojas
+Google slides. https://docs.google.com/presentation/d/1JiU53bI1YgGB2jtGWRkKk16eN0A1mvKlJ7MuFDC2BTY/edit?usp=sharing
 
 **Project website:** [WOC Marketing homepage](https://shawncparkin.github.io/WOC-Marketing/) *(GitHub Pages availability must be confirmed)*  
 **Prototype:** [Interactive CAC calculator](milestone-04-backend/cac-calculator.html)  
