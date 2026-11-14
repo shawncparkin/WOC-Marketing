@@ -1,25 +1,38 @@
-# Prototype build and iteration record
+# Prototype development and validation log
 
-## Project
-- File: [cac-calculator.html](cac-calculator.html)
-- Purpose: demonstrate CAC versus cost-per-conversion with sample data, input validation and a potential executive view.
-- Context: On **November 14, 2026**, ChatGPT was asked to work directly with the connected WOC-Marketing repository. The assistant inspected the repo and identified that the root page was a general WOC landing page, not a marketing data prototype.
+## Scope and provenance
+- New AI-assisted demonstration added during final preparation on **November 14, 2026**; **not** represented as an earlier completed semester lab.
+- Source: [cac-calculator.html](cac-calculator.html).
+- Goal: distinguish ad-platform cost per conversion from CAC calculated using **user-supplied** new-customer counts, with strong input validation and explicit fictional-data labeling.
+- Original team lab prompt/iteration history: not present in the repository. Add genuine earlier prompts and revisions only if available.
 
-## AI-assisted build
-**Date:** 2026-11-14  
-**Task supplied to the coding assistant (summary, not a verbatim student prompt):** Build a self-contained browser-based, sample-only marketing CAC calculator that compares channel spend, reported conversions and manually supplied verified-new-customer counts. Distinguish CAC from cost per conversion, validate negative and impossible inputs, handle zero denominators, and avoid external services or private data.
+## Build prompt summary
+Build a self-contained browser-based marketing CAC calculator with three channels and transparent sample values. Show aggregate spending, cost per platform-reported conversion, and cost per user-supplied new customer. Do not claim these inputs are real WOC CRM or order records. Validate nonnegative numbers, whole-person counts, impossible customer/conversion combinations, zero denominators, and reset behavior; do not store data or connect to third-party services.
 
-**Generated artifact:** `cac-calculator.html`, HTML + CSS + vanilla JavaScript.
+## Executed functional verification — November 14, 2026
 
-**Original student's earlier prompts/iterations:** Not available in this repository. This record does **not** claim to reconstruct them.
+The **exact JavaScript embedded in this GitHub file** was fetched from the proposal branch and executed within an isolated JavaScript runtime against simulated DOM elements. These are scripted logic checks, **not yet a full end-to-end browser rendering test**.
 
-## Test and iteration log (complete with actual observed results)
+| Scenario | Expected / observed result | Status |
+|---|---|---|
+| Starting inputs | Spend $4,700.00 | PASS |
+| Starting reported conversions | Cost per conversion $16.21 | PASS |
+| Starting new-customer inputs | Illustrative CAC $73.44 | PASS |
+| Change Google Ads spend to $3,000 | Spend $5,300.00 | PASS |
+| Recompute after spend change | Illustrative CAC $82.81 | PASS |
+| New customers greater than conversions | Warning; calculations blocked | PASS |
+| Negative spend | Warning; calculations blocked | PASS |
+| Zero new customers on a channel | Channel CAC shows N/A | PASS |
+| All denominators zero | Both rate metrics show N/A | PASS |
+| Reset | Default illustrative CAC $73.44 restored | PASS |
 
-| Date | Test action or prompt iteration | Observed result | Change made |
-|---|---|---|---|
-| Pending | Open page; compare default CAC to 4700 / 64 | Not yet browser-verified | — |
-| Pending | Change spend and count; see recalculation | Not yet browser-verified | — |
-| Pending | Set new customers > conversions | Not yet browser-verified | — |
-| Pending | Set verified new customers to zero | Not yet browser-verified | — |
+**Data assumptions:** Google Ads: $2,400 / 110 conversions / 32 new customers; Instagram Ads: $1,800 / 95 / 20; Email: $500 / 85 / 12. All are hypothetical.
 
-**Important:** Fill these rows only after real testing. Do not claim iterative testing or observed output until documented.
+## Remaining manual QA and rubric evidence
+- Open the **original HTML file** in Chrome/Edge; verify the full layout, labels and controls; capture a genuine screenshot.
+- Repeat keyboard-only input, invalid input, mobile-width responsiveness and each failure case visually.
+- Test the URL after the PR is merged and deployment is enabled; do not claim a published page before checking.
+- Document actual student prompts and iterations; retain a screen recording or screenshots for final Slide 10.
+
+## Important limitations
+No connection to real WOC data; no deduplication of customer IDs; no proof of attribution; no business deployment. Displayed "CAC" is a demonstration of the formula **conditional on supplied counts being genuinely verified first-time customers**, not a real-world measurement.
