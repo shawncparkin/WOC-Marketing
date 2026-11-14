@@ -20,8 +20,8 @@ The tool does **not** import WOC's actual campaigns, CRM, or transaction data. I
 - ChatGPT helped review the project against the rubric and improve the calculator's HTML, CSS, and JavaScript.
 - An earlier version passed **12/12 Chromium checks using a local browser test harness with the same core JavaScript**.
 - The improved JavaScript passed **16/16 functional checks in an isolated V8 runtime with simulated DOM inputs**.
-- **Live Chrome test (November 14, 2026):** Shawn reports all **five manual checks passed** on the published calculator and supplied a genuine ~28-second screen recording and screenshot. The inspected video shows the default values, calculations changing as inputs are edited, and an invalid-entry warning. This complements—but is separate from—the earlier automated tests. Final mobile layout checks and instructor access to the recording still need to be confirmed.
-- The [prompt log](PROMPT_LOG.md) includes genuine conversation prompts, revisions, and **links to two screenshots hosted in Google Drive**. The images are not embedded in this GitHub repository; check instructor access.
+- **Live Chrome test (November 14, 2026):** Shawn reports all **five manual checks passed** on the published calculator and supplied a genuine ~28-second screen recording and screenshot. The inspected video shows the default values, calculations changing as inputs are edited, and an invalid-entry warning. This complements—but is separate from—the earlier automated tests. The video and screenshot are shared as viewable links. The remaining optional QA is checking the mobile layout.
+- The [prompt log](PROMPT_LOG.md) includes genuine conversation prompts, revisions, and **links to two screenshots hosted in Google Drive**. The AI conversation images are linked from Google Drive rather than embedded in this GitHub repository.
 
 ## Suggested demonstration
 
@@ -33,10 +33,9 @@ The tool does **not** import WOC's actual campaigns, CRM, or transaction data. I
 
 **Rubric integrity:** The new calculator was created during November 2026 final-project preparation and is not evidence of an earlier completed semester lab. The log records the interactions that actually occurred.
 
-[Back to project README](../README.md).
 ## Actual browser evidence
 
 - [Shawn's live Chrome calculator recording (~28 seconds)](https://drive.google.com/file/d/1PehbrF5-JSJDL8b5y9qeaOM6VpJAOQhC/view)
 - [Screenshot of starting calculator totals](https://drive.google.com/file/d/1fOs3_Kf23xJ7hUCvGlJ5MmnERNEv7E8x/view)
 
-Shawn reported **5 of 5 manual tests passed**. These files are currently linked from Google Drive (not committed as binary files to GitHub). Check sharing before submission, and use them as genuine demonstration evidence on Slide 10.
+Shawn reported **5 of 5 manual tests passed**. These files are currently linked from Google Drive (not committed as binary files to GitHub). Both files are shared as viewable links and appear on the updated Slide 10; keep a local copy available for presentation playback.
