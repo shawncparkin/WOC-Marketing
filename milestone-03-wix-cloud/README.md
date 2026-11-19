@@ -1,8 +1,7 @@
 # Milestone 3 — Wix Prototype and Cloud Evaluation
 
 **Owner:** Kallie Northrop — solution designer  
-**Repository status:** **Required substantive artifacts are not yet uploaded.** This README is an evidence checklist, not a completed design.
-
+Repository status: Prototype documentation, Thunkable screenshots, and an initial cloud evaluation have been uploaded. Platform comparison and final technology recommendation are still in progress. 
 ## To submit
 
 - [ ] Actual Wix interface screenshots or a working demonstration link
